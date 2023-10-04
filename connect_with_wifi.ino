@@ -1,19 +1,20 @@
-#include <WiFi.h>  // Include the WiFi library, which allows us to connect to a Wi-Fi network.
+#include <WiFi.h>  // 🌐 We invite the WiFi library to help us connect to the internet.
 
 void setup() {
-  Serial.begin(115200);  // Initialize the serial communication at a baud rate of 115200.
-  WiFi.begin("BSMR_W_110", "62334501");  // Attempt to connect to a Wi-Fi network with the specified SSID and password.
+  Serial.begin(115200);  // 🚀 We start talking to the computer at a certain speed (baud rate).
+  WiFi.begin("Name", "Password");  // 📡 We try to make friends with a Wi-Fi network using a special name (SSID) and secret code (password).
 
-  while (WiFi.status() != WL_CONNECTED)  // Enter a loop that continues until the device is connected to the Wi-Fi network.
-  {
-    Serial.print("Trying to Connect!");  // Print "Trying to Connect!" to the serial monitor.
-    delay(2000);  // Pause for 2 seconds before the next iteration of the loop.
+  // 🔁 We keep trying to connect until we succeed.
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print("Trying to Connect!");  // 🗣 We say, "Hey, I'm trying to make a new friend!" to the computer.
+    delay(2000);  // ⏳ We wait patiently for 2 seconds before trying again.
   }
-  Serial.println();  // Print a new line to the serial monitor.
-  Serial.println("Connected! Good to Go!");  // Print "Connected! Good to Go!" to indicate a successful Wi-Fi connection.
-  Serial.println(WiFi.localIP());  // Print the local IP address assigned to the device after a successful connection.
+  Serial.println();  // 📋 We say, "Let's start a new line."
+  Serial.println("Connected! Good to Go!");  // 🎉 We shout, "Yay, we're connected to the internet!" to celebrate.
+  Serial.println(WiFi.localIP());  // 🏡 We proudly announce our unique address on the internet.
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // This is where we can do our special tasks over and over again.
+  // But right now, it's empty, like a blank page in a magical book.
 }
