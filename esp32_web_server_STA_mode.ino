@@ -12,7 +12,7 @@ void setup() {
   Serial.begin(115200);
 
   // 🌐 We try to connect to the Wi-Fi network with a secret name and password
-  WiFi.begin("Shemanto Wifi", "ssssssss");
+  WiFi.begin("Name", "Password");
 
   // 🔄 While we're not connected, we keep trying every 2 seconds
   while (WiFi.status() != WL_CONNECTED) {
