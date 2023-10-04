@@ -1,4 +1,5 @@
 # ESP32 by Shemanto Sharkar
+💻Read my blog [Shemanto's Coding Tales](https://medium.com/@shemantoscodingtales) where technology meets storytelling! 📖
 
 Once upon a time, in the world of technology and endless possibilities, there lived a young boy named Shemanto Sharkar. 🌟 Shemanto was a dreamer who always had a fascination with the magical world of electronics and coding.
 
