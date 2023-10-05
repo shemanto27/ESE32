@@ -15,7 +15,7 @@ void setup() {
   Serial.begin(115200);
 
   // 🌐 We try to connect to the Wi-Fi network with a secret name and password
-  WiFi.begin("Shemanto Wifi", "ssssssss");
+  WiFi.begin("Name", "Password");
 
   // 🔄 While we're not connected, we keep trying every 2 seconds
   while (WiFi.status() != WL_CONNECTED) {
@@ -50,16 +50,23 @@ void loop() {
           
           // 🪄 You can do some special magic here to do things with the message
           
-          if (request.indexOf("GET /ledON HTTP/1.1") != -1)
-          {
-            digitalWrite(LED, HIGH);
+          // Now, let's explain these lines using our story:
+
+          // 🌐 If our friend's message contains "ledON"
+          // it means they want to turn a light ON, just like a magic spell!
+          if (request.indexOf("ledON") != -1) {              
+            // request.indexOf: This part is like searching for a specific word or phrase in a sentence.
+            // != -1: This part is like getting a yes or no answer. When you use != -1, it means "not equal to -1." In computer language, -1 means "no" or "not found." So, != -1 checks if something is found.
+            
+            digitalWrite(LED, HIGH); // ✨ We use our magic wand (digitalWrite) to make the light shine brightly.
           }
 
-          if (request.indexOf("GET /ledOFF HTTP/1.1") != -1)
-          {
+          // 🌐 If our friend's message contains "ledOFF"
+          // it means they want to turn the light OFF, like another magic spell!
+          if (request.indexOf("ledOFF") != -1) {
+            // ✨ We use our magic wand (digitalWrite) to make the light go dark.
             digitalWrite(LED, LOW);
           }
-
           request = ""; // 🧹 We clear our special box for the next message
         } else {
           request += c; // 🧩 If it's not a "newline," we add the character to our message box
